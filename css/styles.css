@@ -1,0 +1,23 @@
+
+.background {
+  background-image: linear-gradient(white, gray);
+}
+
+.starting-buttons {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-game {
+  background-color: green;
+}
+
+.reset-game {
+  background-color: red;
+}
+
+.hard-mode {
+  background-color: blue;
+}
+
