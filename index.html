@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Game of Pig Dice!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Let's Play Pig Dice!</h1>
+      <div class="rules">
+        <h3>What are the rules of Pig Dice?</h3>
+        <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+        <ul>
+          <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+          <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.
+          </li>
+          <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's
+            turn.</li>
+        </ul>
+        <p>The first player to score 100 or more points wins.
+
+          For example, the first player, Donald, begins a turn with a roll of 5. Donald could hold and score 5 points,
+          but chooses to roll again. Donald rolls a 2, and could hold with a turn total of 7 points, but chooses to roll
+          again. Donald rolls a 1, and must end his turn without scoring. The next player, Alexis, rolls the sequence
+          4-5-3-5-5, after which she chooses to hold, and adds her turn total of 22 points to her score.</p>
+        <a href="https://en.wikipedia.org/wiki/Pig_%28dice_game%29">For more info on Pig Dice please click on the
+          link.</a>
+        <br>
+        <br>
+        <div class="starting-buttons">
+          <button type="button" id="start-game" class="button">New Game!</button>
+          <button type="button" id="reset-game" class="button">Reset</button>
+          <button type="button" id="hard-mode" class="button">Start hard mode!</button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="column1">
+        <h2>Player One</h3>
+          <h3>Game Score:</h3>
+          <div id="score-total-1" class="show"></div>
+          <h3>Score this round</h3>
+          <div id="score-temp-1" class="show"></div>
+          <button type="button" id="player1-roll" class="btn">Roll them dice!</button>
+          <button type="button" id="player1-hold" class="btn">Hold them dice!</button>
+      </div>
+
+      <div class="column2">
+        <h2>Dice</h2>
+        <div id="dice" class="show"></div>
+        <div class="column3"></div>
+        <h2>Player Two</h2>
+        <h3>Game Score:</h3>
+        <div id="score-total-2" class="show"></div>
+        <h3>Score this round:</h3>
+        <div id="score-temp-2" class="show"></div>
+        <button type="button" id="player2-roll" class="btn">Roll them dice!</button>
+        <button type="button" id="player2-hold" class="btn">Hold them dice!</button>
+      </div>
+
+
+    </div>
+  </div>
+</body>
