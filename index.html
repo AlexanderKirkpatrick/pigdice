@@ -9,7 +9,7 @@
   <title>Game of Pig Dice!</title>
 </head>
 
-<body>
+<body class="background">
   <div class="container">
     <div class="jumbotron">
       <h1>Let's Play Pig Dice!</h1>
@@ -41,34 +41,33 @@
 
       </div>
     </div>
-
-
-
-    <div class="row">
+    
+    <div id="play" class="row">
       <div class="column1">
         <h2>Player One</h3>
-          <h3>Game Score:</h3>
-          <div id="score-total-1" class="show"></div>
-          <h3>Score this round</h3>
-          <div id="score-temp-1" class="show"></div>
-          <button type="button" id="player1-roll" class="btn">Roll them dice!</button>
-          <button type="button" id="player1-hold" class="btn">Hold them dice!</button>
+          <h3>Game Score:<span id="player-1-score"></span></h3>
+          
       </div>
-
+      <br>
       <div class="column2">
-        <h2>Dice</h2>
-        <div id="dice" class="show"></div>
-        <div class="column3"></div>
-        <h2>Player Two</h2>
-        <h3>Game Score:</h3>
-        <div id="score-total-2" class="show"></div>
-        <h3>Score this round:</h3>
-        <div id="score-temp-2" class="show"></div>
-        <button type="button" id="player2-roll" class="btn">Roll them dice!</button>
-        <button type="button" id="player2-hold" class="btn">Hold them dice!</button>
+        <h2>Current Player: <span id="current-player"></span></h2>
+        <h2>Number Rolled: <span id="current-roll"></span></h2>
+        <h2>Round Total:<span id="round-total"></span></h2>
+        <button id="player-roll" class="btn-info btn">Roll them dice!</button>
+        <button id="player-hold" class="btn-warning btn">Hold them dice!</button>
+      </div>
+      <div id="winners-space">
+        <h2>The winner is: <span id="winner-name"></span></h2>
+      </div>
+      <div id="rolled-one">
+        <h2>You rolled a one! Next player's turn!</h2>
       </div>
 
-
+      <div class="column3">
+        <h2>Player Two</h3>
+          <h3>Game Score:<span id="player-2-score"></span></h3>
+      </div>
     </div>
+
   </div>
 </body>
