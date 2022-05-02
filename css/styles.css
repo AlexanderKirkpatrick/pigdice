@@ -21,3 +21,37 @@
   background-color: blue;
 }
 
+.jumbotron {
+  margin: auto;
+  width: 50%;
+  border: 5px black groove;
+  padding: 10px;
+}
+
+.column1 {
+  text-align: left;
+  border: 5px black solid;
+}
+
+.column2 {
+  margin: auto;
+  width: 50%;
+  border: 5px black solid;
+  padding: 10px;
+}
+
+.column3 {
+  margin: auto;
+  width: 50%;
+  border: 5px black solid;
+  padding: 10px;
+}
+
+#play {
+  display: none;
+}
+
+.h1 {
+  display: flex;
+    text-align: center;
+}
