@@ -1,5 +1,5 @@
 
-.background {
+body {
   background-image: linear-gradient(white, gray);
 }
 
@@ -10,7 +10,8 @@
 }
 
 .start-game {
-  background-color: green;
+  background-color: orange;
+  color: black
 }
 
 .reset-game {
@@ -19,6 +20,7 @@
 
 .hard-mode {
   background-color: blue;
+  color: white;
 }
 
 .jumbotron {
@@ -49,6 +51,15 @@
 
 #play {
   display: none;
+}
+
+#winners-space {
+  display: none;
+}
+
+#rolled-one {
+  display: none;
+  padding-top: 25px;
 }
 
 .h1 {

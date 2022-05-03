@@ -2,7 +2,7 @@
 function Gamers (player1, player2) {
   this.player1 = player1;
   this.player2 = player2;
-  this.activePlayer;
+  this.currentPlayer;
   this.gameStart = false;
 } 
 
@@ -94,6 +94,12 @@ Dice.prototype.roll = function() {
 
 //UI
 
+// class NewGame {
+//   constructor() {
+//     this.currentPlayer = currentPlayer;
+//   }
+// }
+
 function displaySwitch (newGame) {
   if (newGame.player1.isTurn === true) {
     $("span#current-player").text("Player 1");
@@ -103,15 +109,15 @@ function displaySwitch (newGame) {
 }
 
 function winMode(newGame) {
-  $("#winner-space").show();
+  $("#winners-space").show();
   $("span#winner-name").text(newGame.currentPlayer.name);
-  document.getElementById("hold").disabled = true;
-  document.getElementById("roll").disabled = true;
+  document.getElementById("player-hold").disabled = true;
+  document.getElementById("player-roll").disabled = true;
 }
 
 function rollButton (newGame) {
   if (newGame.gameStart === true) {
-    $("rolled-one").hide();
+    $("#rolled-one").hide();
     newGame.currentPlayer.dice.currentRoll = newGame.currentPlayer.dice.roll();
     $("span#current-roll").text(newGame.currentPlayer.dice.currentRoll);
     if (newGame.currentPlayer.isTurnOver() === true) {
@@ -151,7 +157,7 @@ $(document).ready(function() {
   $("button#start-game").click(function() {
     let player1 = new Players ("Player 1");
     let player2 = new Players ("Player 2");
-    newGame = new Gamers(player1, player2);
+    newGame = new Gamers (player1, player2);
     newGame.gameStart = true;
     newGame.currentPlayerSwitch();
     displaySwitch(newGame);
